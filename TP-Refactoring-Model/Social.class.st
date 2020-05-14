@@ -5,6 +5,11 @@ Class {
 }
 
 { #category : #retrieving }
-Social >> retrieveQuestions: anUser [
-	^ self getQuestions: anUser.
+Social >> retrieveQuestions: anUser [ 
+	| followingCol temp |
+	followingCol := OrderedCollection new.
+	anUser following
+		do: [ :follow | followingCol addAll: follow questions ].
+	temp := self getCollectionSortedByVotes: followingCol.
+	^ self getLast100: temp byUser: anUser
 ]

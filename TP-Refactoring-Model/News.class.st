@@ -7,7 +7,7 @@ Class {
 { #category : #private }
 News >> retrieveQuestions: anUser [
 |newsCol temp|
-			newsCol := cuoora questions select:[:q | (q timestamp asDate = Date today)].
+			newsCol := cuoora getTodayQuestions.
 			temp :=  self getCollectionSortedByVotes: newsCol.
 			^ self getLast100: temp byUser: anUser
 ]

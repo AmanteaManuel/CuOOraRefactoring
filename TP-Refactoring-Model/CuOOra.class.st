@@ -32,6 +32,16 @@ CuOOra >> addUser: aUser [
 
 ]
 
+{ #category : #'as yet unclassified' }
+CuOOra >> calculateVotes: aSize [
+questions sum: [:q | q positiveVotes size ] / aSize.
+]
+
+{ #category : #'as yet unclassified' }
+CuOOra >> getTodayQuestions [
+^ questions select:[:q | (q timestamp asDate = Date today)].
+]
+
 { #category : #initialize }
 CuOOra >> initialize [
 	users := OrderedCollection new.

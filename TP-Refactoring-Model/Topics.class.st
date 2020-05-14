@@ -6,5 +6,10 @@ Class {
 
 { #category : #retrieving }
 Topics >> retrieveQuestions: anUser [
-	^ self getQuestions: anUser
+	| topicsCol temp |
+	topicsCol := OrderedCollection new.
+	anUser topics
+		do: [ :topic | topicsCol addAll: topic questions ].
+	temp := self getCollectionSortedByVotes: topicsCol.
+	^ self getLast100: temp byUser: anUser
 ]

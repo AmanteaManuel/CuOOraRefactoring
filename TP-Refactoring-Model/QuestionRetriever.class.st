@@ -9,12 +9,12 @@ Class {
 
 { #category : #'instance creation' }
 QuestionRetriever class >> new: cuoora [
-	^ self new cuoora: cuoora
+	^ self new cuoora: cuoora;  yourself.
 ]
 
 { #category : #'instance creation' }
 QuestionRetriever class >> new: cuoora and: aSymbol [
-	^ self new cuoora: cuoora; option:aSymbol; yourself.
+	^ self new cuoora: cuoora;  yourself.
 ]
 
 { #category : #accesing }
@@ -32,16 +32,6 @@ QuestionRetriever >> getCollectionSortedByVotes: aCollection [
 QuestionRetriever >> getLast100: aCollection byUser: anUser [
 	^ (aCollection last: (100 min: aCollection size))
 		reject: [ :q | q user = anUser ]
-]
-
-{ #category : #methods }
-QuestionRetriever >> getQuestions: anUser [
-	| followingCol temp |
-	followingCol := OrderedCollection new.
-	anUser following
-		do: [ :follow | followingCol addAll: follow questions ].
-	temp := self getCollectionSortedByVotes: followingCol.
-	^ self getLast100: temp byUser: anUser
 ]
 
 { #category : #retrieving }
