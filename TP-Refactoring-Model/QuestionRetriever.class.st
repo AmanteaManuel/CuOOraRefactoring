@@ -12,11 +12,6 @@ QuestionRetriever class >> new: cuoora [
 	^ self new cuoora: cuoora;  yourself.
 ]
 
-{ #category : #'instance creation' }
-QuestionRetriever class >> new: cuoora and: aSymbol [
-	^ self new cuoora: cuoora;  yourself.
-]
-
 { #category : #accesing }
 QuestionRetriever >> cuoora: aCuooraInstance [
 	cuoora := aCuooraInstance 
