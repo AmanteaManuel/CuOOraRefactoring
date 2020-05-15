@@ -2,7 +2,6 @@ Class {
 	#name : #User,
 	#superclass : #Object,
 	#instVars : [
-		'questionRetriever',
 		'questions',
 		'answers',
 		'username',
@@ -81,23 +80,8 @@ User >> password: anObject [
 ]
 
 { #category : #accessing }
-User >> questionRetriever [
-	^ questionRetriever
-]
-
-{ #category : #private }
-User >> questionRetriever: aQuestionRetriever [
-	questionRetriever := aQuestionRetriever.
-]
-
-{ #category : #accessing }
 User >> questions [
 	^ questions
-]
-
-{ #category : #accessing }
-User >> questionsOfInterest [
-	^ questionRetriever retrieveQuestions: self.
 ]
 
 { #category : #accessing }
@@ -113,9 +97,4 @@ User >> username [
 { #category : #private }
 User >> username: anObject [
 	username := anObject
-]
-
-{ #category : #accessing }
-User >> votes [
-	^ votes
 ]

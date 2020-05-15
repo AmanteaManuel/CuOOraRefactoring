@@ -17,10 +17,10 @@ Publication >> addVote: aVote [
 
 { #category : #accessing }
 Publication >> description [
-	^ description
+	^description
 ]
 
-{ #category : #private }
+{ #category : #accessing }
 Publication >> description: anObject [
 	description := anObject
 ]
