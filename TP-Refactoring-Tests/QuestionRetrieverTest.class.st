@@ -152,14 +152,14 @@ QuestionRetrieverTest >> testNewsRetrieveQuestions [
 
 { #category : #testing }
 QuestionRetrieverTest >> testPopularTodayRetrieveQuestions [
-  self
-     popularTodayNoLikesTwoQuestions;
-     popularTodayNoLikesThreeQuestions;
-     popularTodayAtLeastOneVote;
-     popularTodayFourQuestionsAtLeastOneVote;
-     popularTodayTwoLikesFourQuestionsAtLeastOneVote;
-     popularTodayFourLikesFourQuestionsAtLeastOneVote;
-     popularTodayFiveLikesFourQuestionsAtLeastOneVote
+	self
+		popularTodayNoLikesTwoQuestions;
+		popularTodayNoLikesThreeQuestions;
+		popularTodayAtLeastOneVote;
+		popularTodayFourQuestionsAtLeastOneVote;
+		popularTodayTwoLikesFourQuestionsAtLeastOneVote;
+		popularTodayFourLikesFourQuestionsAtLeastOneVote;
+		popularTodayFiveLikesFourQuestionsAtLeastOneVote
 ]
 
 { #category : #testing }

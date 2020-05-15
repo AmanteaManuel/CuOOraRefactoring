@@ -10,11 +10,6 @@ Class {
 }
 
 { #category : #adding }
-CuOOra >> addQuestion: aQuestion [
-	questions add: aQuestion
-]
-
-{ #category : #adding }
 CuOOra >> addQuestion: aQuestion forUser: aUser [
 	aUser addQuestion: aQuestion.
 	questions add: aQuestion.
@@ -32,12 +27,12 @@ CuOOra >> addUser: aUser [
 
 ]
 
-{ #category : #'as yet unclassified' }
+{ #category : #methods }
 CuOOra >> calculateVotes: aSize [
-questions sum: [:q | q positiveVotes size ] / aSize.
+	^ (questions sum: [ :q | q positiveVotes size ]) / aSize
 ]
 
-{ #category : #'as yet unclassified' }
+{ #category : #methods }
 CuOOra >> getTodayQuestions [
 ^ questions select:[:q | (q timestamp asDate = Date today)].
 ]
