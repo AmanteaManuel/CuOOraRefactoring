@@ -29,7 +29,7 @@ CuOOra >> addUser: aUser [
 
 { #category : #methods }
 CuOOra >> calculateVotes: aSize [
-	^ (questions sum: [ :q | q positiveVotes size ]) / aSize
+	^ (questions sum: [ :q | q countPositiveVotes ]) / aSize
 ]
 
 { #category : #methods }

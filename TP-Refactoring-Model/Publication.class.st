@@ -15,6 +15,11 @@ Publication >> addVote: aVote [
 	votes add: aVote
 ]
 
+{ #category : #methods }
+Publication >> countPositiveVotes [
+	^ self positiveVotes size
+]
+
 { #category : #accessing }
 Publication >> description [
 	^description
