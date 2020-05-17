@@ -34,7 +34,7 @@ CuOOra >> calculateVotes: aSize [
 
 { #category : #methods }
 CuOOra >> getTodayQuestions [
-^ questions select:[:q | (q timestamp asDate = Date today)].
+	^ questions select: [ :q | q isToday ]
 ]
 
 { #category : #initialize }

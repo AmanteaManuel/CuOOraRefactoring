@@ -37,6 +37,11 @@ Publication >> initialize [
 ]
 
 { #category : #methods }
+Publication >> isToday [
+	^ (timestamp asDate = Date today)
+]
+
+{ #category : #methods }
 Publication >> negativeVotes [
 	^ votes reject: [:vote | vote isLike].
 
