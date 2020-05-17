@@ -35,11 +35,6 @@ Question >> addTopic: aTopic [
 
 ]
 
-{ #category : #adding }
-Question >> addVote: aVote [
-	votes add: aVote
-]
-
 { #category : #'initalize-release' }
 Question >> initialize [
 	super initialize.

@@ -52,14 +52,9 @@ Publication >> positiveVotes [
 	^ votes select:[:vote | vote isLike].
 ]
 
-{ #category : #accessing }
-Publication >> timestamp [
-	^ timestamp
-]
-
-{ #category : #private }
-Publication >> timestamp: anObject [
-	timestamp := anObject
+{ #category : #methods }
+Publication >> timestamp [ 
+	^timestamp
 ]
 
 { #category : #accessing }
